@@ -1,35 +1,36 @@
-import { useState } from "react"
+import { useState } from "react";
+import './index.scss'
 
 
-export default function Prova3(){
-    const [mes, setMes] = useState('')
-    const [dia, setDia] = useState(1)
-    const [resp, setResp] = useState('')
 
-    function Libras(){
-        if(mes === 'setembro' && dia>=23|| mes === 'outubro' && dia<=22 ){
-            setResp('Seu signo é de libras')
+
+export default function Sorvato(){
+    const [gramas,setGramas]= useState(0);
+    const [resp, setResp]= useState(0);
+
+
+    function Somarx(){
+        let x = gramas * 3.50;
+        if(gramas>=1000){
+            x = gramas * 3.00
         }
-        else{
-            setResp('Você não é de Libras')
+        if(gramas==0){
+            x='Preço invalido'
         }
+          
+        setResp(x)
     }
 
     return(
-        <main>
+        <section className="page-gramas">
             <div>
-                <div>
-                    <h3> Libras ?? </h3>
-                    <input type='text' placeholder="mes de nascimento" value={mes} onChange={e => setMes(e.target.value)}/>
-                    <input type='number' placeholder="dia de nascimento"  value={dia} onChange={e => setDia(Number(e.target.value))} />
+            <h1>Calcular gramas</h1>
+                <input     type='number'   value={gramas}  onChange={e => setGramas(Number(e.target.value)) } />
+                <div>{resp}</div>
+                <button onClick={Somarx}>Calcular</button>
 
-                    <button onClick={Libras}> Verificar </button>
-
-                    <div>
-                        {resp}
-                    </div>
-                </div>
             </div>
-        </main>
+            
+        </section>
     )
 }

@@ -1,35 +1,49 @@
 import { useState } from "react"
 
 
-export default function Prova2(){
-    const [mes, setMes] = useState('')
-    const [dia, setDia] = useState(1)
-    const [resp, setResp] = useState('')
 
-    function Libras(){
-        if(mes === 'setembro' && dia>=23|| mes === 'outubro' && dia<=22 ){
-            setResp('Seu signo é de libras')
-        }
-        else{
-            setResp('Você não é de Libras')
-        }
+
+
+import './index.scss'
+export default function Açai(){
+     
+
+    const [qtdpeq, setQtdpeq]= useState(0)
+    const [qtdMed, setQmed]= useState(0)
+    const [qtdGrand, setGrand]= useState(0)
+    const [qtddes, setQdesc]= useState(0)
+    const [resp , setResp] = useState(0)
+
+
+    function Calcular(){
+        let x = (qtdpeq*13.50) + (qtdMed*15.00 )+ (qtdGrand * 17.50);
+        let y = x*(qtddes/100);
+        let z = x - y;
+        setResp(z)
     }
 
+   
+ 
+
     return(
-        <main>
+        <section className="page-menu">
+            
             <div>
-                <div>
-                    <h3> Libras ?? </h3>
-                    <input type='text' placeholder="mes de nascimento" value={mes} onChange={e => setMes(e.target.value)}/>
-                    <input type='number' placeholder="dia de nascimento"  value={dia} onChange={e => setDia(Number(e.target.value))} />
+            <h1>Total de venda Açai</h1>
+                 <h2>Quantidade Açai Pequeno</h2>
+                <input     type='number'   value={qtdpeq}  onChange={e => setQtdpeq(Number(e.target.value)) } />
+                <h2>Quantidade Açai Media</h2>
+                <input     type='number'   value={qtdMed}  onChange={e => setQmed(Number(e.target.value)) } />
+                <h2>Quantidade Açai Grande</h2>
+                <input     type='number'   value={qtdGrand}  onChange={e => setGrand(Number(e.target.value)) } />
+                <h2>Cupom de Desconto</h2>
+                <input     type='number'   value={qtddes}  onChange={e => setQdesc(Number(e.target.value)) } />
+                <div>{resp}</div>
 
-                    <button onClick={Libras}> Verificar </button>
+                <button onClick={Calcular}>Somar</button>
 
-                    <div>
-                        {resp}
-                    </div>
-                </div>
             </div>
-        </main>
+
+        </section>
     )
 }
