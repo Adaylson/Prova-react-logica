@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './index.scss'
 
 
 export default function Prova1(){
@@ -10,10 +11,10 @@ export default function Prova1(){
         if(dia <= 0 || dia > 31){
             setResp('Dia invalido')
         }
-        else if(!mes){
+        else if(!mes || mes === 'Selecione'){
             setResp('Insira o mes')
         }          
-        else if(mes === 'setembro' && dia>=23|| mes === 'outubro' && dia<=22 ){
+        else if(mes === 'Setembro' && dia>=23|| mes === 'Outubro' && dia<=22 ){
             setResp('Seu signo é de libras')
         }
         else{
@@ -22,29 +23,30 @@ export default function Prova1(){
     }
 
     return(
-        <main>
+        <main className="a">
             <div>
-                <div>
+                <div className="b">
                     <h3> Libras ?? </h3>
-                    <select onChange={e => setMes(e.target.value)}>
-                        <option ></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
-                        <option value={mes}></option>
+                    <select value={mes} onChange={e => setMes(e.target.value)}>
+                        <option>Selecione</option>
+                        <option>Janeiro</option>
+                        <option>fevereiro</option>
+                        <option>Março</option>
+                        <option>Abril</option>
+                        <option>Maio</option>
+                        <option>Junho</option>
+                        <option>Julho</option>
+                        <option>Agosto</option>
+                        <option>Setembro</option>
+                        <option>Outubro</option>
+                        <option>Novembro</option>
+                        <option>Dezembro</option>
                     </select>
-                    <input type='text' placeholder="mes de nascimento" value={mes} onChange={e => setMes(e.target.value)}/>
                     <input type='number' placeholder="dia de nascimento"  value={dia} onChange={e => setDia(Number(e.target.value))} />
 
                     <button onClick={Libras}> Verificar </button>
 
-                    <div>
+                    <div className="ab">
                         {resp}
                     </div>
                 </div>
