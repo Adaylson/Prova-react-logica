@@ -1,0 +1,20 @@
+.home{
+    *{
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    display: flex;
+    justify-content: center;
+
+    .lin{
+        display: flex;
+        flex-direction: column;
+    }
+    .Links{
+        padding: 4em;
+
+        h1{
+            margin-bottom: 3em;
+        }
+    }
+}
