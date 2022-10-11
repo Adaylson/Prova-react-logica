@@ -15,9 +15,9 @@ export default function Index(){
                 <Route path='/prova1' element={<Prova1/>}/>
                 <Route path='/prova2' element={<Prova2/>}/>
                 <Route path='/prova3' element={<Prova3/>}/>
-                <Route path='/prova4' element={<Prova3/>}/>
-                <Route path='/prova5' element={<Prova3/>}/>
-                <Route path='/prova6' element={<Prova3/>}/>
+                <Route path='/prova4' element={<Prova4/>}/>
+                <Route path='/prova5' element={<Prova5/>}/>
+                <Route path='/prova6' element={<Prova6/>}/>
                 <Route path='/' element={<Home/>}/>
             </Routes>
         </BrowserRouter>
