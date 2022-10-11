@@ -1,0 +1,40 @@
+.page-salario{
+    margin: 0;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+   
+
+    button{
+        background-color: rgb(21, 167, 82);
+        color: white;
+        border: none;
+        padding: 10px 10px;
+        border-radius: 5px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: rgb(31, 209, 105);
+    }
+    section{
+        margin-top: 5em;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(114, 113, 113, 0.7);
+        width: 25em;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .p{
+        margin-top: 2em;
+       
+        position: absolute;
+    }
+}

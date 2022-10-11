@@ -26,6 +26,7 @@ export default function Açai(){
  
 
     return(
+       
         <section className="page-menu">
             
             <div>
