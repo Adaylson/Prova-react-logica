@@ -9,6 +9,9 @@
     .lin{
         display: flex;
         flex-direction: column;
+
+        flex-wrap: wrap;
+        
     }
     .Links{
         padding: 4em;
@@ -16,5 +19,19 @@
         h1{
             margin-bottom: 3em;
         }
+    }
+
+    a{
+        text-decoration: none;
+        font-family:Arial, Helvetica, sans-serif ;
+        padding: 0.8em;
+        border-radius:5px;
+
+        background-color: #000;
+        color: #fff;
+        font-weight: 800;
+
+        margin-bottom: 20%;
+
     }
 }
