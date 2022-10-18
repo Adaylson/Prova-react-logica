@@ -18,6 +18,10 @@ export default function Home(){
                     <Link to={'/prova6'}>Prova6</Link>
                     <Link to={'/prova7'}>Prova7</Link>
                     <Link to={'/prova8'}>Prova8</Link>
+                    <Link to={'/prova9'}>Prova9</Link>
+                    <Link to={'/prova10'}>Prova10</Link>
+                    <Link to={'/prova11'}>Prova11</Link>
+                    <Link to={'/prova12'}>Prova12</Link>
                 </div>
             </div>
         </main>

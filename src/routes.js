@@ -8,6 +8,10 @@ import Prova5 from './pages/prova5/index.js';
 import Prova6 from './pages/prova6/index.js';
 import Prova7 from './pages/prova7/index.js';
 import Prova8 from './pages/prova8/index.js';
+import Prova9 from './pages/prova9/index.js';
+import Prova10 from './pages/prova10/index.js';
+import Prova11 from './pages/prova11/index.js';
+import Prova12 from './pages/prova12/index.js';
 
 
 export default function Index(){
@@ -22,6 +26,10 @@ export default function Index(){
                 <Route path='/prova6' element={<Prova6/>}/>
                 <Route path='/prova7' element={<Prova7/>}/>
                 <Route path='/prova8' element={<Prova8/>}/>
+                <Route path='/prova9' element={<Prova9/>}/>
+                <Route path='/prova10' element={<Prova10/>}/>
+                <Route path='/prova11' element={<Prova11/>}/>
+                <Route path='/prova12' element={<Prova12/>}/>
                 <Route path='/' element={<Home/>}/>
             </Routes>
         </BrowserRouter>
