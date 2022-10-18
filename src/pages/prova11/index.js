@@ -9,7 +9,21 @@ export default function Prova11(){
     const [resp, setResp] = useState([]);
 
     function mapear(){
-        document.write("<h1> AAAAA<br />AAAA </h1>")
+        let b = []
+
+        let a = 0
+        let c = ''
+        let d = 0
+        let e = ''
+        for(a; a < base; a++){   
+            b[a] = "Amem"
+        }
+        for(d; d < altura; d++){
+            c = document.write(`<p> ${b} </p>`) ;
+
+        }
+
+        setResp(c)
     }
 
     return(
@@ -20,6 +34,7 @@ export default function Prova11(){
                     <input value={altura} onChange={e => setAltura(Number(e.target.value))} />
                     <button onClick={mapear}> Calcular </button>
                     <p>{resp} <br/></p>
+
                 </div>
             </div>
         </main>
