@@ -6,7 +6,6 @@ import './index.scss';
 export default function Prova11(){
     const [base, setBase] = useState(0);
     const [altura, setAltura] = useState(0);
-    const [resp, setResp] = useState([]);
 
     function mapear(){
         let b = []
@@ -14,16 +13,16 @@ export default function Prova11(){
         let a = 0
         let c = ''
         let d = 0
-        let e = ''
+        
+        
         for(a; a < base; a++){   
-            b[a] = "Amem"
+            b[a] = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHprDrAzJFiVTT0rNM-q2xLL1TtWCE5UiHZg&usqp=CAU' />"
         }
+        
         for(d; d < altura; d++){
-            c = document.write(`<p> ${b} </p>`) ;
+            c = document.write(b) ;
 
         }
-
-        setResp(c)
     }
 
     return(
@@ -33,7 +32,6 @@ export default function Prova11(){
                     <input value={base} onChange={e => setBase(Number(e.target.value))} />
                     <input value={altura} onChange={e => setAltura(Number(e.target.value))} />
                     <button onClick={mapear}> Calcular </button>
-                    <p>{resp} <br/></p>
 
                 </div>
             </div>
